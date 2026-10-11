@@ -1,0 +1,7 @@
+{
+  "name": "MicrobeClassify - Microorganism Taxonomy & Identification Engine",
+  "description": "Interactive taxonomy, phenotypic classifier, virtual staining lab, and AI diagnostic model for identifying and defining microorganisms.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

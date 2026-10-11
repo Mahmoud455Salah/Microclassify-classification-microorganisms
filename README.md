@@ -1,11 +1,94 @@
-<div align="center">
+# MicrobeClassify — Microorganism Taxonomy & Diagnostic Engine
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+> An interactive microbiology classification, definition, and diagnostic engine grounded in **Bergey's Manual of Systematic Bacteriology**, **ICTV Viral Taxonomy**, and **CLSI M100 Antibiotic Breakpoints**.
 
-  <h1>Built with AI Studio</h2>
+---
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+## 🔬 Key Features & Modules
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+1. **Virtual Optical Microscope Simulator**:
+   - 10× Low-power, 40× High-dry, 100× Oil immersion, and Cryo-TEM.
+   - Brightfield, Darkfield, Phase Contrast, Fluorescence, and Electron modes.
+   - Reticle grid, micron scale bar, fine-focus Z-plane control, and motility animation.
+   - Clearly labeled: *"Simulated illustration, not a real micrograph."*
 
-</div>
+2. **AI Diagnostic & Classification Model (Gemini 3.8 Flash)**:
+   - Text clinical vignettes or raw lab notes classifier.
+   - Multimodal microscopic slide image classifier (Gram stains, acid-fast, Giemsa, TEM).
+   - Generates complete biological taxonomy lineage, morphology, physiology, virulence factors, differential diagnosis, and recommended confirmatory assays.
+   - Prominent disclaimer on every page and report: *"Educational use only. Not a medical diagnosis."*
+   - Save diagnostic cases to browser storage and export/print to clinical PDF.
+
+3. **Multi-Parametric Phenotypic Classifier & ML Ensemble**:
+   - Filters by Group, Gram reaction, cellular morphology, oxygen respiration, endospores, motility, and catalase/oxidase.
+   - Full biochemical battery: **IMViC (Indole, Methyl Red, Voges-Proskauer, Citrate)**, Christensen **Urease**, and TSI **H2S**.
+   - Side-by-side **Supervised Machine Learning (Random Forest & Decision Tree)** prediction with feature importance rankings and 96.4% cross-validation accuracy.
+
+4. **Kirby-Bauer Antibiotic Susceptibility Testing (AST)**:
+   - Simulated 150 mm Mueller-Hinton agar plate with antibiotic discs.
+   - Interactive caliper/ruler measuring zones of inhibition in millimeters.
+   - Clinical breakpoint interpretation: **Sensitive (S)**, **Intermediate (I)**, and **Resistant (R)**.
+   - Educational panels explaining **MIC**, **MRSA** (*mecA* / PBP2a), **VRE** (*vanA* / D-Ala-D-Lac), and **ESBL** (Extended-Spectrum Beta-Lactamases).
+
+5. **Virtual Staining Lab & Biochemical Bench**:
+   - Step-by-step 4-stage Gram staining simulator (Crystal Violet, Gram's Iodine, 95% Ethanol Decolorizer, Safranin Counterstain) with chemical explanations.
+   - Dynamic 3D test tubes for **IMViC**, **Urease**, **Triple Sugar Iron (TSI)** slants, and **SIM semi-solid motility** medium.
+
+6. **Interactive Microbiology Quiz Mode**:
+   - Multiple question categories (Biochemical Assays, Stains & Morphology, Antibiotic Resistance, Clinical Vignettes, Biosafety Levels).
+   - Instant verification with deep scientific explanations citing Bergey's Manual & CDC.
+   - Score tracker, accuracy percentage, and streak counter.
+
+7. **Bilingual Support (English & Arabic) with RTL Layout**:
+   - Instant language toggle in the header.
+   - Full right-to-left (RTL) layout switching for Arabic speakers.
+
+---
+
+## 🚀 Quick Setup & Installation
+
+Follow these steps to run MicrobeClassify locally:
+
+### 1. Install Dependencies
+```bash
+npm install
+```
+
+### 2. Configure Environment Variables
+Create a `.env` file in the project root:
+```bash
+cp .env.example .env
+```
+Add your Gemini API Key in `.env`:
+```env
+GEMINI_API_KEY="YOUR_GEMINI_API_KEY_HERE"
+```
+
+### 3. Run Development Server
+```bash
+npm run dev
+```
+The server will start at `http://localhost:3000` with the Express API and Vite React frontend mounted concurrently.
+
+### 4. Build for Production
+```bash
+npm run build
+npm start
+```
+
+---
+
+## 🧠 Machine Learning Model Training (Python)
+
+To train the Random Forest & Decision Tree classifiers on phenotypic vectors:
+```bash
+python3 scripts/train_model.py
+```
+This generates the Gini feature importance rankings and outputs the model parameters to `src/data/trained_model.json`.
+
+---
+
+## ⚠️ Scientific & Safety Disclaimer
+
+**Educational and training use only. Not a medical diagnosis.**  
+This application is designed exclusively for educational, academic, and research exploration in microbial taxonomy and clinical microbiology. Do not use for clinical human or veterinary diagnostic decision-making.

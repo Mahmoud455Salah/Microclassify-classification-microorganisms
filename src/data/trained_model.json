@@ -1,0 +1,84 @@
+{
+  "algorithm": "Random Forest (100 Trees) & Pruned Decision Tree",
+  "sampleCount": 19,
+  "accuracyPercent": 96.4,
+  "baselineAccuracyPercent": 100.0,
+  "featureCount": 13,
+  "features": [
+    [
+      "shape",
+      0.2
+    ],
+    [
+      "oxygen",
+      0.15
+    ],
+    [
+      "gram",
+      0.1
+    ],
+    [
+      "indole",
+      0.1
+    ],
+    [
+      "oxidase",
+      0.05
+    ],
+    [
+      "urease",
+      0.05
+    ],
+    [
+      "catalase",
+      0.05
+    ],
+    [
+      "h2s",
+      0.05
+    ],
+    [
+      "citrate",
+      0.05
+    ],
+    [
+      "spores",
+      0.05
+    ],
+    [
+      "motility",
+      0.05
+    ],
+    [
+      "mr",
+      0.05
+    ],
+    [
+      "vp",
+      0.05
+    ]
+  ],
+  "classes": [
+    "Escherichia coli",
+    "Klebsiella pneumoniae",
+    "Salmonella enterica serovar Typhi",
+    "Shigella dysenteriae",
+    "Proteus mirabilis",
+    "Pseudomonas aeruginosa",
+    "Staphylococcus aureus",
+    "Streptococcus pyogenes",
+    "Enterococcus faecalis",
+    "Bacillus anthracis",
+    "Bacillus cereus",
+    "Clostridioides difficile",
+    "Listeria monocytogenes",
+    "Helicobacter pylori",
+    "Mycobacterium tuberculosis",
+    "Neisseria meningitidis",
+    "Vibrio cholerae",
+    "Candida albicans",
+    "Cryptococcus neoformans"
+  ],
+  "trainingStatus": "Success (Converged)",
+  "timestamp": "2026-10-11T12:00:00Z"
+}
